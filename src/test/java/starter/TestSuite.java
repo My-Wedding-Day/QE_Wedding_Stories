@@ -8,7 +8,10 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         plugin = {"pretty"},
         features = "src/test/resources/features/",
-        tags = "@LoginUser"
+        tags = "@ProfileWO"
 )
 public class TestSuite {
 }
+
+//User : @ProfileUser
+//starter.starter.starter.WO :

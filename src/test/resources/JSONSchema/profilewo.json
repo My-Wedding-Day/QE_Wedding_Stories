@@ -1,0 +1,60 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "object",
+      "properties": {
+        "woname": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "phonenumber": {
+          "type": "string"
+        },
+        "about": {
+          "type": "string"
+        },
+        "weburl": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        },
+        "logo": {
+          "type": "string"
+        },
+        "city": {
+          "type": "string"
+        },
+        "address": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "woname",
+        "email",
+        "phonenumber",
+        "about",
+        "weburl",
+        "status",
+        "logo",
+        "city",
+        "address"
+      ]
+    },
+    "message": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "data",
+    "message",
+    "status"
+  ]
+}
