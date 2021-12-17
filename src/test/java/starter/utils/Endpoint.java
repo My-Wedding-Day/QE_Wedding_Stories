@@ -6,4 +6,5 @@ public class Endpoint {
     public String LOGINORGANIZER = BASE_URL+"/login/organizer";
     public String GETUSER = BASE_URL+"/users/profile";
     public String REGUSER = BASE_URL+"/register/users";
+    public String REGWo = BASE_URL+"/register/organizer";
 }
