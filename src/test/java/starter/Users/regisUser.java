@@ -14,9 +14,9 @@ public class regisUser {
     @Step
     public void setBodyReq(){
         requestParams = new JSONObject();
-        requestParams.put("name","testlagi123");
-        requestParams.put("email","alta12345@gmail.com");
-        requestParams.put("password","Password192");
+        requestParams.put("name","inicobadulu");
+        requestParams.put("email","inicobadulu@alta.id");
+        requestParams.put("password","Password399");
     }
     @Step
     public void setBodyReqEmailExisted(){
