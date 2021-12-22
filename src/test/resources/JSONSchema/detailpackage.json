@@ -1,0 +1,64 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "object",
+      "properties": {
+        "ID": {
+          "type": "integer"
+        },
+        "Organizer_ID": {
+          "type": "integer"
+        },
+        "Wo_Name": {
+          "type": "string"
+        },
+        "City": {
+          "type": "string"
+        },
+        "Address": {
+          "type": "string"
+        },
+        "PackageName": {
+          "type": "string"
+        },
+        "Price": {
+          "type": "integer"
+        },
+        "Pax": {
+          "type": "integer"
+        },
+        "PackageDesc": {
+          "type": "string"
+        },
+        "UrlPhoto": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "ID",
+        "Organizer_ID",
+        "Wo_Name",
+        "City",
+        "Address",
+        "PackageName",
+        "Price",
+        "Pax",
+        "PackageDesc",
+        "UrlPhoto"
+      ]
+    },
+    "message": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "data",
+    "message",
+    "status"
+  ]
+}

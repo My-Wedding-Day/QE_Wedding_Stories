@@ -8,4 +8,5 @@ public class Endpoint {
     public String REGUSER = BASE_URL+"/register/users";
     public String REGWo = BASE_URL+"/register/organizer";
     public String ADDPACKAGE = BASE_URL+"/package";
+    public String DETAILPACKAGE = BASE_URL+"/package/";
 }

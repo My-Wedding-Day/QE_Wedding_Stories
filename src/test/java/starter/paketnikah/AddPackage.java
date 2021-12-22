@@ -45,7 +45,7 @@ public class AddPackage {
                 .header("Content-Type", "application/json")
                 .header("Authorization", "Bearer "+token)
                 .header("Content-Type","multipart/form-data")
-                .formParam("PackageName","Halalin Yuks")
+                .formParam("PackageName","Halalin Yuks Dulu")
                 .formParam("price","130000000")
                 .formParam("pax","1000")
                 .formParam("packagedesc","Kita akan memberikan layanan yang terbaik")
