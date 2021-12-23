@@ -1,4 +1,4 @@
-package starter.paketnikah;
+package starter.organizer;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;

@@ -1,4 +1,4 @@
-package starter.paketnikah;
+package starter.organizer;
 
 import net.serenitybdd.rest.SerenityRest;
 import net.thucydides.core.annotations.Step;
