@@ -1,15 +1,13 @@
-package starter.reservations;
+package starter.Users;
 
 import net.serenitybdd.rest.SerenityRest;
 import net.thucydides.core.annotations.Step;
 import org.json.simple.JSONObject;
 import starter.utils.Endpoint;
 
-import java.io.File;
-
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 
-public class createReservation {
+public class listOrderUser {
     Endpoint endpoint = new Endpoint();
     JSONObject requestParams;
     String token;
@@ -39,26 +37,22 @@ public class createReservation {
     }
 
     @Step
-    public void hitEndpointCreateOrder() {
+    public void hitEndpointListOrderUser() {
         SerenityRest
                 .given()
-                .header("Accept", "application/json")
+                .header("Content-Type", "application/json")
                 .header("Authorization", "Bearer "+token)
-                .header("Content-Type","multipart/form-data")
-                .multiPart("package_id","56")
-                .multiPart("date","2021-12-28")
-                .multiPart("additional","none")
-                .multiPart("pax","200")
                 .when()
-                .post(endpoint.ORDERPACKAGE)
+                .get(endpoint.LISTORDERUSER)
                 .then()
-                .statusCode(201);
+                .statusCode(200);
+
     }
 
     @Step
-    public void validateOrderPackage() {
+    public void validateListOrderUser() {
         SerenityRest
                 .then()
-                .body(matchesJsonSchemaInClasspath("JSONSchema/createreservation.json"));
+                .body(matchesJsonSchemaInClasspath("JSONSchema/listOrderUser.json"));
     }
 }
