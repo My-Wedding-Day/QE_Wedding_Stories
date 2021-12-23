@@ -1,0 +1,65 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "ID": {
+              "type": "integer"
+            },
+            "Package_ID": {
+              "type": "integer"
+            },
+            "PackageName": {
+              "type": "string"
+            },
+            "Name": {
+              "type": "string"
+            },
+            "Date": {
+              "type": "string"
+            },
+            "Additional": {
+              "type": "string"
+            },
+            "Total_Pax": {
+              "type": "integer"
+            },
+            "Status_Order": {
+              "type": "string"
+            },
+            "Status_Payment": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "ID",
+            "Package_ID",
+            "PackageName",
+            "Name",
+            "Date",
+            "Additional",
+            "Total_Pax",
+            "Status_Order",
+            "Status_Payment"
+          ]
+        }
+      ]
+    },
+    "message": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "data",
+    "message",
+    "status"
+  ]
+}
