@@ -13,4 +13,5 @@ public class Endpoint {
     public String ORDERPACKAGE = BASE_URL+"/reservation";
     public String LISTORDERUSER = BASE_URL+"/order/users/my";
     public String ORDERLISTWO = BASE_URL+"/order/organizer/my";
+    public String UPDSTATUSORDER = BASE_URL+"/order/status/";
 }
