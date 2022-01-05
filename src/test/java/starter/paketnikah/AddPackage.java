@@ -17,8 +17,8 @@ public class AddPackage {
     @Step
     public void setBodyReq() {
         requestParams = new JSONObject();
-        requestParams.put("email","altaqewo20@gmail.com");
-        requestParams.put("password","altaqewo20");
+        requestParams.put("email","halaldulu@gmail.com");
+        requestParams.put("password","halalindulu123");
     }
 
     @Step
@@ -45,11 +45,11 @@ public class AddPackage {
                 .header("Content-Type", "application/json")
                 .header("Authorization", "Bearer "+token)
                 .header("Content-Type","multipart/form-data")
-                .formParam("PackageName","Halalin Yuks Dulu")
+                .formParam("PackageName","Yakali Ga Halal")
                 .formParam("price","130000000")
                 .formParam("pax","1000")
                 .formParam("packagedesc","Kita akan memberikan layanan yang terbaik")
-                .multiPart("urlphoto",new File("./src/test/resources/gambar/UPM.jpg"))
+                .multiPart("urlphoto",new File("./src/test/resources/gambar/nikahyuk.jpeg"))
                 .when()
                 .post(endpoint.ADDPACKAGE)
                 .then()

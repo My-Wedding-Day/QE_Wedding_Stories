@@ -19,4 +19,5 @@ public class Endpoint {
     public String EDITWOPHOTO = BASE_URL+"/organizer/profile/photo";
     public String EDITWODOC = BASE_URL+"/organizer/profile/document";
     public String PAYMENT = BASE_URL+"/reservation/payment/invoice";
+    public String GETRESUSER = BASE_URL+"/order/users/my";
 }

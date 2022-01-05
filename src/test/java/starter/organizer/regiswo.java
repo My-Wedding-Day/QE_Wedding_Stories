@@ -14,8 +14,8 @@ public class regiswo {
     @Step
     public void setBodyReqwo(){
         requestParams = new JSONObject();
-        requestParams.put("Woname","Percobaan12");
-        requestParams.put("email","alta@percobaan.com");
+        requestParams.put("Woname","Wedding Line");
+        requestParams.put("email","weddingline@gmail.com");
         requestParams.put("PhoneNumber","089769533672");
         requestParams.put("password","Password192");
         requestParams.put("city","depok");
