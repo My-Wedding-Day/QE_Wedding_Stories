@@ -36,7 +36,6 @@ public class profileUser {
                 .path("token");
 
     }
-    
     @Step
     public void hitEndpointprofileUser() {
         SerenityRest
