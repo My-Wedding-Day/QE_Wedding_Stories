@@ -1,4 +1,4 @@
-package starter.Users;
+package starter.organizer;
 
 import net.serenitybdd.rest.SerenityRest;
 import net.thucydides.core.annotations.Step;
@@ -7,7 +7,7 @@ import starter.utils.Endpoint;
 
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 
-public class profileUser {
+public class profileWO {
     Endpoint endpoint = new Endpoint();
     JSONObject requestParams;
     String token;
@@ -15,8 +15,8 @@ public class profileUser {
     @Step
     public void setBodyReq() { //Valid Email And Password
         requestParams = new JSONObject();
-        requestParams.put("email", "iniuser@gmail.com");
-        requestParams.put("password", "12345678");
+        requestParams.put("email", "altaqewo20@gmail.com");
+        requestParams.put("password", "altaqewo20");
     }
 
     @Step
@@ -26,7 +26,7 @@ public class profileUser {
                 .header("Content-Type", "application/json")
                 .body(requestParams.toString())
                 .when()
-                .post(endpoint.LOGINUSER)
+                .post(endpoint.LOGINORGANIZER)
                 .then()
                 .statusCode(201);
 
@@ -36,6 +36,7 @@ public class profileUser {
                 .path("token");
 
     }
+
     @Step
     public void hitEndpointprofileUser() {
         SerenityRest

@@ -15,15 +15,15 @@ public class loginUser {
     @Step
     public void setBodyReq(){
         requestParams = new JSONObject();
-        requestParams.put("email","alta@gmail.com");
-        requestParams.put("password","Password192");
+        requestParams.put("email","inicobadulu@alta.id");
+        requestParams.put("password","Password399");
     }
 
     @Step
     public void setBodyReqInvalidPass(){
         requestParams = new JSONObject();
-        requestParams.put("email","alta@gmail.com");
-        requestParams.put("password","Password");
+        requestParams.put("email","inicobadulu@alta.id");
+        requestParams.put("password","Password192");
     }
     @Step
     public void setBodyReqInvalidEmail(){

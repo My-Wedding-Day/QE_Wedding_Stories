@@ -1,19 +1,21 @@
-package starter.Users;
+package starter.reservations;
 
 import net.serenitybdd.rest.SerenityRest;
 import net.thucydides.core.annotations.Step;
 import org.json.simple.JSONObject;
 import starter.utils.Endpoint;
 
+import java.io.File;
+
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 
-public class profileUser {
+public class createReservation {
     Endpoint endpoint = new Endpoint();
     JSONObject requestParams;
     String token;
 
     @Step
-    public void setBodyReq() { //Valid Email And Password
+    public void setBodyReq() {
         requestParams = new JSONObject();
         requestParams.put("email", "iniuser@gmail.com");
         requestParams.put("password", "12345678");
@@ -34,25 +36,29 @@ public class profileUser {
                 .then()
                 .extract()
                 .path("token");
-
     }
+
     @Step
-    public void hitEndpointprofileUser() {
+    public void hitEndpointCreateOrder() {
         SerenityRest
                 .given()
-                .header("Content-Type", "application/json")
+                .header("Accept", "application/json")
                 .header("Authorization", "Bearer "+token)
+                .header("Content-Type","multipart/form-data")
+                .multiPart("package_id","56")
+                .multiPart("date","2021-12-28")
+                .multiPart("additional","none")
+                .multiPart("pax","200")
                 .when()
-                .get(endpoint.GETUSER)
+                .post(endpoint.ORDERPACKAGE)
                 .then()
-                .statusCode(200);
-
+                .statusCode(201);
     }
 
     @Step
-    public void validateJSONSchemaprofileUser() {
+    public void validateOrderPackage() {
         SerenityRest
                 .then()
-                .body(matchesJsonSchemaInClasspath("JSONSchema/ProfileUser.json"));
+                .body(matchesJsonSchemaInClasspath("JSONSchema/createreservation.json"));
     }
 }

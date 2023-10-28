@@ -28,7 +28,6 @@ public class profileUserSteps {
     @Then("I am redirected to my profile")
     public void i_am_redirected_to_my_profile() {
         Profileuser.validateJSONSchemaprofileUser();
-
     }
 }
 

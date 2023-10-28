@@ -14,22 +14,22 @@ public class regisUser {
     @Step
     public void setBodyReq(){
         requestParams = new JSONObject();
-        requestParams.put("name","testlagi123");
-        requestParams.put("email","alta12345@gmail.com");
-        requestParams.put("password","Password192");
+        requestParams.put("name","inicobadulu");
+        requestParams.put("email","inicobadulu@alta.id");
+        requestParams.put("password","Password399");
     }
     @Step
     public void setBodyReqEmailExisted(){
         requestParams = new JSONObject();
         requestParams.put("name","test23");
-        requestParams.put("email","alta@alterra.id");
+        requestParams.put("email","inicobadulu@alta.id");
         requestParams.put("password","Password192");
     }
     @Step
     public void setBodyReqUNExisted(){
         requestParams = new JSONObject();
-        requestParams.put("name","test");
-        requestParams.put("email","alta56@alterra.id");
+        requestParams.put("name","inicobadulu");
+        requestParams.put("email","inicobadulu@alta.id");
         requestParams.put("password","Password192");
     }
     @Step
